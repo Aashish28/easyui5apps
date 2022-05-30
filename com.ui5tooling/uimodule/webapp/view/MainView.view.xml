@@ -1,0 +1,31 @@
+<mvc:View
+    controllerName="com.ui5tooling.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                    <Button text="my button" press=".onPressMyButton" />
+                    	<List
+                            items="{/Flight_DetailsSet}"
+                            headerText="Products"
+                            growing="true"
+                            growingThreshold="4"
+                            growingScrollToLoad="true">
+                            <StandardListItem
+                                title="{Carrid}-{Planetype}"
+                                description="{Connid}"
+                                icon="{ProductPicUrl}"
+                                iconDensityAware="false"
+                                iconInset="false" />
+                        </List>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
